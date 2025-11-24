@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'patients',
     'corsheaders',
+    'questionnaires',
+
 ]
 
 MIDDLEWARE = [
