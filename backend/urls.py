@@ -24,7 +24,8 @@ urlpatterns = [
     path("api/health/", views.health, name="health"),
     path('api/accounts/', include('accounts.urls')),
     path("api/patients/", include("patients.urls")),
-    path('api/questionnaires/', include('questionnaires.urls')),
+   path("api/", include("questionnaires.urls")),
+
 
     
     # API Docs
