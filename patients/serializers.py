@@ -5,3 +5,16 @@ class MeSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id", "username", "email"]
+class PatientListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "username", "email"]
+class PatientDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "username", "email"]
+class PractitionerListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "username", "email"]
+

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'drf_spectacular',
     'patients',
+    'practitioners',
     'corsheaders',
     'questionnaires',
 

@@ -28,3 +28,23 @@ class Patient(models.Model):
 
     def __str__(self):
         return self.pseudonym or f"Patient {self.pk}"
+class PractitionerPatient(models.Model):
+    practitioner = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="assigned_patients",
+        limit_choices_to={"groups__name": "practitioners"},
+    )
+    patient = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="assigned_practitioners",
+        limit_choices_to={"groups__name": "patients"},
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("practitioner", "patient")
+
+    def __str__(self):
+        return f"{self.practitioner.username} → {self.patient.username}"
