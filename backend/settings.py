@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'practitioners',
     'corsheaders',
     'questionnaires',
+    'exports',
 
 ]
 
