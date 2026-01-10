@@ -1,0 +1,47 @@
+{
+  "resourceType": "Questionnaire",
+  "status": "active",
+  "title": "RLS-6",
+  "description": "RLS-Schweregrad-Fragebogen.(0=völlig zufrieden,10=völlig unzufrieden)",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Wie zufrieden waren Sie mit Ihrem Schlaf in den letzten 7 Nächten?",
+      "type": "integer"
+    },
+   {
+  "linkId": "2",
+  "text": "Wie schwer waren Ihre RLS-Symptome während der letzten 7 Nächte bzw. Tage in den folgenden Situationen?",
+  "type": "group",
+  "item": [
+    {
+      "linkId": "2.1",
+      "text": "Beim Einschlafen",
+      "type": "integer"
+    },
+    {
+      "linkId": "2.2",
+      "text": "Während der Nacht",
+      "type": "integer"
+    },
+    {
+      "linkId": "2.3",
+      "text": "Tagsüber in Ruhe(im Sitzen, im Liegen)",
+      "type": "integer"
+    },
+    {
+      "linkId": "2.4",
+      "text": "Tagsüber, wenn Sie nicht in Ruhe waren, sondern sich körperlich bestätigt haben(Gehen, berufliche Aktivitäten, Hausarbeit, Freizeittätigkeiten)",
+      "type": "integer"
+    }]
+  },
+
+    {
+      "linkId": "3",
+      "text": "Wie müde oder schläfrig waren Sie in den letzten 7 Tagen tagsüber(zwischen Aufstehen und Schlafengehen?",
+      "type": "integer"
+    }
+  
+    
+  ]
+}

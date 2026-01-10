@@ -1,0 +1,60 @@
+{
+  "resourceType": "Questionnaire",
+  "status": "active",
+  "title": " Schlaftagebuch",
+  "description": "Täglicher Tagebucheintrag zu Schlafzeiten, Schlafstörungen und subjektiver Schlafqualität.",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Typische Schlafdauer",
+      "type": "integer"
+    },
+    {
+      "linkId": "2",
+      "text": "Typische Dauer im Bett",
+      "type": "integer"
+    },
+    {
+      "linkId": "3",
+      "text": "Zubettgehzeit",
+      "type": "time"
+    },
+    {
+      "linkId": "4",
+      "text": "Zeitpunkt des Einschlafens",
+      "type": "time"
+    },
+    {
+      "linkId": "5",
+      "text": "Schlafstörungen in der Nacht",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "5a",
+          "text": "Wie oft wachen Sie nachts auf?",
+          "type": "integer"
+        },
+        {
+          "linkId": "5b",
+          "text": "Wie lange dauert es bis zum Wiedereinschlafen?",
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "linkId": "6",
+      "text": "Zeitpunkt des Aufwachens",
+      "type": "time"
+    },
+    {
+      "linkId": "7",
+      "text": "Zeitpunkt des Aufstehens",
+      "type": "time"
+    },
+    {
+      "linkId": "8",
+      "text": "Schlafqualität insgesamt (1 = sehr schlecht, 9 = hervorragend)",
+      "type": "integer"
+    }
+  ]
+}

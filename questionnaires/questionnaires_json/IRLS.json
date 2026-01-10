@@ -1,0 +1,60 @@
+
+{
+  "resourceType": "Questionnaire",
+  "status": "active",
+  "title": "International RLS Severity Scale (IRLS)",
+  "description": "Beurteilungsbogen zum Restless-Legs-Syndrom. Score 0–40.",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "In den letzten 2 Wochen...Wie stark würden Sie die RLS-Beschwerden in Ihren Beinen oder Armen einschätzen?",
+      "type": "integer"
+    },
+    {
+      "linkId": "2",
+      "text": "Wie stark würden Sie Ihren Drang einschätzen, sich wegen Ihrer RLS-Beschwerden bewegen zu müssen?",
+      "type": "integer"
+    },
+    {
+      "linkId": "3",
+      "text": "Wie sehr wurden die RLS-Beschwerden in Ihren Beinen oder Armen durch Bewegung gelindert?",
+      "type": "integer"
+    },
+    {
+      "linkId": "4",
+      "text": "In den letzte Wochen... Wie sehr wurde Ihr Schlaf durch Ihre RLS-Beschwerden gestört?",
+      "type": "integer"
+    },
+    {
+      "linkId": "5",
+      "text": "Wie müde oder schläfrig waren Sie tagsüber wegen Ihrer RLS-Beschwerden?",
+      "type": "integer"
+    },
+    {
+      "linkId":"6",
+      "text":"Wie stark waren Ihre RLS-Beschwerden insgesamt?" ,
+      "type":"integer"
+    },
+    {
+      "linkId":"7",
+      "text":"Wie oft sind Ihre RLS-Beschwerden aufgetreten?",
+      "type":"integer"
+  
+    },
+    {
+      "linkId":"8",
+      "text":"In den letzten Wochen... Wenn Sie RLS-Beschwerden hatten, wie stark waren diese durchschnittlich?",
+      "type":"integer"
+    },
+    {
+      "linkId":"9",
+      "text":"Wie sehr haben sich Ihre RLS-Beschwerden auf Ihre Fähigkeit ausgewirkt, Ihren Alltagstätigkeiten nachzugehen, z.B. ein zufriedeenstellendes Familien-,Privat-,Schul oder Arbeitsleben zu führen?",
+      "type":"integer"
+    },
+    {
+      "linkId":"10",
+      "text":"Wie stark haben Ihre RLS-Beschwerden Ihre Stimmung beeinträchtigt, waren Sie z.B. wütend, niedergeschlagen, traurig, ängstlich oder gereizt?",
+      "type":"integer"
+    }
+  ]
+}

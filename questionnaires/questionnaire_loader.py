@@ -7,8 +7,18 @@ def load_questionnaire(slug: str):
     file_path = BASE / f"{slug}.json"
     if not file_path.exists():
         raise FileNotFoundError(f"{slug}.json nicht gefunden.")
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+
+    # Read as text first so we can produce better errors (and tolerate UTF-8 BOM).
+    text = file_path.read_text(encoding="utf-8-sig")
+    if not text.strip():
+        raise ValueError(f"{file_path.name} ist leer oder enthält nur Whitespaces.")
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as e:
+        raise ValueError(
+            f"Ungültiges JSON in {file_path.name}: {e.msg} (line {e.lineno} col {e.colno})"
+        ) from e
 
 def list_questionnaire_slugs():
     return [

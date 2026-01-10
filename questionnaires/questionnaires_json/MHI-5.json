@@ -1,0 +1,80 @@
+{
+  "resourceType": "Questionnaire",
+  "status": "active",
+  "title": "MHI-5 (Mental Health Inventory-5)",
+  "description": "5 Fragen zur psychischen Gesundheit. Score 0–100.",
+  "item": [
+    {
+      "linkId": "mhi5",
+      "type": "group",
+      "text": "Mental Health Inventory – Kurzform (MHI-5)",
+      "item": [
+        {
+          "linkId": "a",
+          "text": "Wie oft waren Sie in den vergangenen 4 Wochen sehr nervös?",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": { "code": "1", "display": "Immer" } },
+            { "valueCoding": { "code": "2", "display": "Meistens" } },
+            { "valueCoding": { "code": "3", "display": "Oft" } },
+            { "valueCoding": { "code": "4", "display": "Manchmal" } },
+            { "valueCoding": { "code": "5", "display": "Selten" } },
+            { "valueCoding": { "code": "6", "display": "Nie" } }
+          ]
+        },
+        {
+          "linkId": "b",
+          "text": "Wie oft waren Sie in den vergangenen 4 Wochen so niedergeschlagen, dass Sie nichts aufheitern konnte?",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": { "code": "1", "display": "Immer" } },
+            { "valueCoding": { "code": "2", "display": "Meistens" } },
+            { "valueCoding": { "code": "3", "display": "Oft" } },
+            { "valueCoding": { "code": "4", "display": "Manchmal" } },
+            { "valueCoding": { "code": "5", "display": "Selten" } },
+            { "valueCoding": { "code": "6", "display": "Nie" } }
+          ]
+        },
+        {
+          "linkId": "c",
+          "text": "Wie oft haben Sie sich in den vergangenen 4 Wochen ruhig und gelassen gefühlt?",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": { "code": "1", "display": "Immer" } },
+            { "valueCoding": { "code": "2", "display": "Meistens" } },
+            { "valueCoding": { "code": "3", "display": "Oft" } },
+            { "valueCoding": { "code": "4", "display": "Manchmal" } },
+            { "valueCoding": { "code": "5", "display": "Selten" } },
+            { "valueCoding": { "code": "6", "display": "Nie" } }
+          ]
+        },
+        {
+          "linkId": "d",
+          "text": "Wie oft fühlten Sie sich in den vergangenen 4 Wochen entmutigt und traurig?",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": { "code": "1", "display": "Immer" } },
+            { "valueCoding": { "code": "2", "display": "Meistens" } },
+            { "valueCoding": { "code": "3", "display": "Oft" } },
+            { "valueCoding": { "code": "4", "display": "Manchmal" } },
+            { "valueCoding": { "code": "5", "display": "Selten" } },
+            { "valueCoding": { "code": "6", "display": "Nie" } }
+          ]
+        },
+        {
+          "linkId": "e",
+          "text": "Wie oft waren Sie in den vergangenen 4 Wochen glücklich?",
+          "type": "choice",
+          "answerOption": [
+            { "valueCoding": { "code": "1", "display": "Immer" } },
+            { "valueCoding": { "code": "2", "display": "Meistens" } },
+            { "valueCoding": { "code": "3", "display": "Oft" } },
+            { "valueCoding": { "code": "4", "display": "Manchmal" } },
+            { "valueCoding": { "code": "5", "display": "Selten" } },
+            { "valueCoding": { "code": "6", "display": "Nie" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
