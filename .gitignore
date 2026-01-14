@@ -15,3 +15,9 @@ venv/
 # OS
 .DS_Store
 
+
+# backups
+/backups/
+/backups/**
+*.sqlite3-wal
+*.sqlite3-shm
