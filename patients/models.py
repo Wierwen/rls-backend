@@ -1,7 +1,8 @@
-from django.db import models
+
 
 # Create your models here.
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 import secrets
 
@@ -28,6 +29,7 @@ class Patient(models.Model):
 
     def __str__(self):
         return self.pseudonym or f"Patient {self.pk}"
+
 class PractitionerPatient(models.Model):
     practitioner = models.ForeignKey(
         User,
@@ -48,3 +50,47 @@ class PractitionerPatient(models.Model):
 
     def __str__(self):
         return f"{self.practitioner.username} → {self.patient.username}"
+
+
+class PatientConsent(models.Model):
+    class Status(models.TextChoices):
+        GRANTED = "GRANTED", "Granted"
+        REVOKED = "REVOKED", "Revoked"
+
+    patient = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="consents_as_patient",
+        limit_choices_to={"groups__name": "patients"},
+    )
+    practitioner = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="consents_as_practitioner",
+        limit_choices_to={"groups__name": "practitioners"},
+    )
+
+    status = models.CharField(max_length=16, choices=Status.choices, default=Status.GRANTED)
+
+    granted_at = models.DateTimeField(null=True, blank=True)
+    revoked_at = models.DateTimeField(null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ("patient", "practitioner")
+
+    def grant(self):
+        self.status = self.Status.GRANTED
+        self.granted_at = timezone.now()
+        self.revoked_at = None
+        self.save(update_fields=["status", "granted_at", "revoked_at", "updated_at"])
+
+    def revoke(self):
+        self.status = self.Status.REVOKED
+        self.revoked_at = timezone.now()
+        self.save(update_fields=["status", "revoked_at", "updated_at"])
+
+    def __str__(self):
+        return f"Consent({self.patient.username} -> {self.practitioner.username}: {self.status})"
